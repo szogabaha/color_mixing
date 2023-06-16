@@ -3,8 +3,8 @@ export function feladat01(szinek) {
     let n = szinek.length;
     let totalCombinations = 0;
 
-    // Starting from one, there should be at least one color selected in the combination.
-    for(let k = 1; k<= n; k++) {
+    // Starting from two, there should be at least two colors selected in the combination.
+    for(let k = 2; k<= n; k++) {
         
         // (C(K) = n! / (k! * (n-k)!))
         const combinations = factorial(n) / (factorial(k) * factorial(n - k))
