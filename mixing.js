@@ -7,9 +7,9 @@ export function feladat01(szinek) {
     for(let k = 1; k<= n; k++) {
         
         // (C(K) = n! / (k! * (n-k)!))
-        const combbinations = factorial(n) / (factorial(k) * factorial(n - k))
+        const combinations = factorial(n) / (factorial(k) * factorial(n - k))
         // C(total) = C(1) + C(2) + .. + C(n)
-        totalCombinations += combbinations;
+        totalCombinations += combinations;
     }
 
     return totalCombinations;
