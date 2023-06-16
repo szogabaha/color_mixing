@@ -1,0 +1,30 @@
+//As per the description, I assumed that the array only contains one color at most once, there are no duplicates
+export function feladat01(szinek) {
+    let n = szinek.length;
+    let totalCombinations = 0;
+
+    // Starting from one, there should be at least one color selected in the combination.
+    for(let k = 1; k<= n; k++) {
+        
+        // (C(K) = n! / (k! * (n-k)!))
+        const combbinations = factorial(n) / (factorial(k) * factorial(n - k))
+        // C(total) = C(1) + C(2) + .. + C(n)
+        totalCombinations += combbinations;
+    }
+
+    return totalCombinations;
+
+}
+
+function factorial(num) {
+    if (num === 0 || num === 1) {
+        return 1;
+    }
+
+    let result = 1;
+    for(let i = 2; i <= num; i++) {
+        result *= i;
+    }
+
+    return result;
+}
